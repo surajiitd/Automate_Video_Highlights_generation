@@ -1,0 +1,18 @@
+from moviepy.editor import VideoFileClip, concatenate_videoclips
+clip1 = VideoFileClip("./highlight_clips/highlight1.mp4")
+clip2 = VideoFileClip("./highlight_clips/highlight2.mp4")
+clip3 = VideoFileClip("./highlight_clips/highlight3.mp4")
+clip4 = VideoFileClip("./highlight_clips/highlight5.mp4")
+clip5 = VideoFileClip("./highlight_clips/highlight6.mp4")
+clip6 = VideoFileClip("./highlight_clips/highlight7.mp4")
+clip7 = VideoFileClip("./highlight_clips/highlight8.mp4")
+clip8 = VideoFileClip("./highlight_clips/highlight9.mp4")
+clip9 = VideoFileClip("./highlight_clips/highlight10.mp4")
+clip10 = VideoFileClip("./highlight_clips/highlight11.mp4")
+clip11= VideoFileClip("./highlight_clips/highlight12.mp4")
+clip12 = VideoFileClip("./highlight_clips/highlight13.mp4")
+clip13= VideoFileClip("./highlight_clips/highlight14.mp4")
+clip14= VideoFileClip("./highlight_clips/highlight4.mp4")
+
+final_clip = concatenate_videoclips([clip1,clip2,clip3,clip4,clip5,clip6,clip7,clip8,clip9,clip9,clip10,clip11,clip12,clip13,clip14])
+final_clip.write_videofile("./final_highlights.mp4")
