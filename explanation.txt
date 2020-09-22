@@ -1,0 +1,34 @@
+we don’t have to rely on machine learning or deep learning techniques to do it. 
+We will be using speech analysis for this task.﻿
+
+moviepy : video analysis.(eg: 
+	1.extracting audio from video.
+	2.extract subclip of video,
+	3.concat finally all clips).
+
+
+librosa : for speech analysis.
+
+complete algo : 
+1. extract audio from video using moviepy
+2. load audio file using librosa
+3.  Create chunks for 10 secs
+4. Calculate the energy
+5. Calculate the energy for each chunk
+6. Plot the energy of each chunk using matplotlib
+7. Create a dataframe(df) for energy data(who are > threshold)
+8. create the excitement snippet
+9. extract video clips of same timestamps as audio files.
+10. concate videoclips using moviepy. 
+
+
+### to extract audio : 
+clip = mp.VideoFileClip("./videofile.mp4")
+clip.audio.write_audiofile("./audio.wav")
+
+### to extract subclip: 
+ffmpeg_extract_subclip("a.mp4",start,end,targetname=filename)
+
+### to concatenate :
+(func is: final_clip=concatenate_videoclips([clip1,clip2,...]
+	final_clip.write_videofile("a.mp4")   )

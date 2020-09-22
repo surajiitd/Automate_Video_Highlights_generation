@@ -10,6 +10,8 @@ from moviepy.video.io.ffmpeg_tools import ffmpeg_extract_subclip
 filename = "./audio.wav"
 
 # Load the file
+# sr means sample rate : which means how many 
+# samples are recorded per second.
 x, sr = librosa.load(filename, sr=16000)
 int(librosa.get_duration(x, sr) / 60)
 
@@ -30,7 +32,7 @@ energy = np.array([sum(abs(x[i:i + window_length] ** 2)) for i in range(0, len(x
 plt.hist(energy)
 plt.show()
 
-# Create a df for energy data
+# cc
 df = pd.DataFrame(columns=['energy', 'start', 'end'])
 thresh = 180
 row_index = 0
